@@ -29,7 +29,7 @@
 
     </div>
     <div class="col-sm-8 text-center"> 
-      <h1>Välj universitetshus</h1>
+      <h3>Välj universitetshus</h3>
     <form method="POST" action="Logic.php">
     <select name="selected_house">
     <option value="novahuset">Novahuset</option>

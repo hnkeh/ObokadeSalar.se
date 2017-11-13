@@ -1,3 +1,8 @@
+body {
+    
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+}
+
 .navbar {
     margin-bottom: 0;
     border-radius: 0;
@@ -19,6 +24,10 @@ footer {
     padding: 15px;
 }
 
+.result {
+    text-align: center;
+}
+
 @media screen and (max-width: 767px) {
     .sidenav {
 	display: none;
@@ -28,8 +37,7 @@ footer {
     }
 
     footer {
-	bottom: 0;
-	position: absolute;
+
 	width: 100%;
     }
 }

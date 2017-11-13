@@ -1,5 +1,4 @@
-      <h3>Test</h3>
-      <p>Lorem ipsum...</p>
+
     </div>
     </div>
     <div class="col-sm-2 sidenav">
