@@ -6,9 +6,34 @@ if (isset($_POST['search_button'])) {
     
     include ("Head.php");
     include ("Body.php");
+    include ("HouseSearch.php");
     $selected_house = $_POST["selected_house"];
     StartLogic($selected_house);
     include ("BodyBreak.php");
+}
+
+if (isset($_POST['single_search_button'])) {
+    
+    include ("Head.php");
+    include ("Body.php");
+    include ("BodySingle.php");
+    $classrooms = $_POST["classrooms"];
+    SingleSearch($classrooms);
+    include ("BodyBreak.php");
+}
+
+function SingleSearch($classrooms) {
+        
+    //Convert to url.
+    $room_array = preg_split( "/[, ]/", $classrooms );
+    $url = "http://schema.oru.se/setup/jsp/SchemaICAL.ics?startDatum=idag&intervallTyp=d&intervallAntal=1&sokMedAND=false&sprak=SV&resurser=";
+
+    foreach ($room_array as $room) {
+
+        $url .= "l." .  $room . "%2C";
+    }
+
+    FormatIcalFile($url);
 }
 
 //Mainlogic delegater.
