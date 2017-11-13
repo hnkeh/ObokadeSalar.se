@@ -1,0 +1,29 @@
+body {
+    
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+}
+
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+.row.content {
+    height: 867px;
+}
+
+.sidenav {
+    background-color: #bfbfbf;
+    padding-top: 20px;
+    height: 100%;
+}
+
+@media screen and (max-width: 767px) {
+    .sidenav {
+	display: none;
+    }
+    .row.content {
+	height:auto;
+    }
+}
+
