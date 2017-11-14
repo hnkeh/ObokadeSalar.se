@@ -1,7 +1,8 @@
     <div class="col-sm-8 text-center"> 
       <h3>Välj universitetshus</h3>
+         <div class="house_search_div">
     <form method="POST" action="Logic.php">
-    <select name="selected_house">
+    <select name="selected_house" style="float: left;">
     <option value="novahuset">Novahuset</option>
     <option value="langhuset">Långhuset</option>
     <option value="teknikhuset">Teknikhuset</option>
@@ -15,7 +16,13 @@
     <option value="musikskolan">Musikhögskolan</option>
     <option value="bibliotek">Bibliotek Grupprum</option>
     </select>
-    <input class="btn btn-primary" type="submit" name="search_button" value="Sök">
+    <div class="input-group date" style="width: 40%;">
+         <input type="text" class="form-control" name="date" value="Idag" >
+         <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+         </span>
+         <input class="btn btn-primary" style="float: right;" type="submit" name="search_button" value="Sök">
+         </div>
     </form>
+         </div>
       <hr>
     <div id="results">

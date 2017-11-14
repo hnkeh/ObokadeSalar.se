@@ -18,6 +18,10 @@ body {
     height: 100%;
 }
 
+.house_search_div {
+    display: inline-block;
+}
+
 @media screen and (max-width: 767px) {
     .sidenav {
 	display: none;
