@@ -3,20 +3,23 @@ include("CalFileParser.php");
 
 //Button Events.
 if (isset($_POST['search_button'])) {
-    include 'head.php';
-    include 'body.php';
+    
+    include ("Head.php");
+    include ("Body.php");
+    include ("HouseSearch.php");
     $selected_house = $_POST["selected_house"];
     StartLogic($selected_house);
-    include 'footer.php';
+    include ("BodyBreak.php");
 }
 
 if (isset($_POST['single_search_button'])) {
     
-    include 'head.php';
-    include 'body_classroom_search.php';
+    include ("Head.php");
+    include ("Body.php");
+    include ("BodySingle.php");
     $classrooms = $_POST["classrooms"];
     SingleSearch($classrooms);
-    include 'footer.php';
+    include ("BodyBreak.php");
 }
 
 function SingleSearch($classrooms) {
@@ -88,7 +91,7 @@ function FormatIcalFile($url) {
     $cal->set_timezone("Europe/Berlin");
 
     $remote_ical = $cal->parse($url);
-    
+
     //Gather data from Ical.
     $index = 0;
     while ($index < count($remote_ical)) {
@@ -120,7 +123,7 @@ function FormatIcalFile($url) {
     }
 
     //HTML element.
-    $output = "<table class='table table-striped table-hover' style='text-align: center;'>
+    $output .= "<table class='table table-striped' style='text-align: center;'>
     <thead>
       <tr>
         <th style='text-align: center;'>Sal</th>
@@ -130,7 +133,7 @@ function FormatIcalFile($url) {
     <tbody>
       <tr>";
     
-    //HTML creator.
+    //HTML creater.
     foreach ($search_array as $key => $item) {
 
         $output .= "<td>" . $key . "</td><td>06:00";

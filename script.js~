@@ -1,0 +1,6 @@
+("#search_button").click(function(){
+  $.get("response.php", function(data) {
+    $("#some_div").html(data);
+    window.setTimeout(update, 10000);
+  });
+}
